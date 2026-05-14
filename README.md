@@ -2,6 +2,12 @@
 
 Présentation du projet : **41 955 décisions de justice rendues en avril 2026** (Cour de cassation, cours d'appel, tribunaux judiciaires, tribunaux de commerce), importables dans votre Notion en deux clics. Texte intégral, métadonnées structurées, recherche par l'IA Notion native.
 
+## Démonstration
+
+https://github.com/KohenAvocats/Judith/releases/download/v1.0.0/demo.mp4
+
+> Si la vidéo ne s'affiche pas dans le lecteur intégré, cliquez sur le lien ci-dessus pour la télécharger ou la visionner directement.
+
 **Ce pack est volontairement limité au mois d'avril 2026** : il sert de démonstration du projet. L'objectif est de montrer aux confrères avocats et aux juristes ce qu'on peut faire avec un corpus de jurisprudence française importé dans un workspace Notion personnel.
 
 Mis à disposition par le cabinet **[Kohen Avocats](https://www.kohenavocats.fr)**.
