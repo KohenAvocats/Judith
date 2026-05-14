@@ -123,11 +123,13 @@ Les décisions sont issues de **Judilibre**, base officielle de la Cour de cassa
 
 Cadre légal : article L. 111-13 du Code de l'organisation judiciaire, article 33 de la loi n° 2019-222 du 23 mars 2019, décrets n° 2020-797 et n° 2021-1276.
 
-Une fois importées dans votre espace Notion, **vous devenez responsable du traitement RGPD** de ces données. Sont notamment interdits :
+**À noter** : l'occultation officielle ne couvre que les **parties et tiers personnes physiques** (art. L. 111-13, al. 1 COJ). Les magistrats, greffiers, avocats, experts et témoins **ne sont pas anonymisés par défaut** (al. 2 : occultation facultative sur demande). Le corpus contient donc leurs noms : c'est conforme au régime légal d'open data, pas une erreur.
 
-- toute tentative de réidentification des personnes physiques mentionnées
-- tout profilage, classement, évaluation ou comparaison des magistrats et membres du greffe (sanctionné par l'art. 226-18 du Code pénal : 5 ans d'emprisonnement et 300 000 € d'amende)
-- tout recoupement avec d'autres bases nominatives
+Une fois importées dans votre espace Notion, **vous devenez responsable du traitement RGPD** de ces données nominatives. Sont notamment interdits :
+
+- toute tentative de réidentification des parties et tiers anonymisés
+- **tout profilage, classement, évaluation ou comparaison des magistrats et membres du greffe** (art. L. 111-13, al. 3 COJ, sanctionné par l'art. 226-18 du Code pénal : 5 ans d'emprisonnement et 300 000 € d'amende)
+- tout recoupement avec d'autres bases nominatives constituant un profilage
 - toute revente sans valeur ajoutée substantielle
 
 Cet outil ne fournit **aucun conseil juridique** et ne remplace pas une vérification sur la source officielle : [www.courdecassation.fr](https://www.courdecassation.fr). Vérifiez systématiquement le texte officiel avant tout usage professionnel.

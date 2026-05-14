@@ -79,7 +79,7 @@ Résolution : vérifier la sortie du terminal pour identifier l'erreur. Si néce
 - **Rate limit Notion** : ~8 req/s sustained. Pour 41 955 décisions, l'import dure environ 1h30 à 2h. Pas plus rapide possible sans risquer un ban temporaire de l'API.
 - **OAuth Public Integration** : limitée à 100 utilisateurs distincts tant qu'elle n'est pas soumise et approuvée au Marketplace Notion. Au-delà, un message d'erreur s'affichera lors de l'OAuth.
 - **Pas de mise à jour automatique** : ce pack est statique sur avril 2026. Une nouvelle version sera publiée pour les mois suivants.
-- **Anonymisation Judilibre imparfaite** : malgré l'anonymisation officielle, certaines décisions contiennent encore des éléments identifiants (noms de magistrats, parfois de parties). L'utilisateur reste responsable du traitement RGPD des données importées.
+- **Occultation Judilibre limitée aux parties** : l'art. L. 111-13, al. 1 COJ n'impose l'occultation que des nom et prénoms des personnes physiques parties et tiers. Les magistrats, greffiers, avocats, experts et témoins **ne sont pas anonymisés par défaut** (al. 2 : occultation facultative sur demande). Ce n'est pas une erreur résiduelle, c'est le régime légal. L'utilisateur reste responsable du traitement RGPD et doit en particulier respecter l'interdiction de profilage de l'al. 3 (sanctionnée par l'art. 226-18 CP).
 
 ## Comment aider un utilisateur
 

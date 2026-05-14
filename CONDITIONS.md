@@ -34,20 +34,27 @@ Sanction : **5 ans d'emprisonnement et 300 000 € d'amende** (article 226-18 du
 - Publier un classement comparatif de juridictions ou de magistrats fondé sur ces données
 - Entraîner un modèle prédictif sur les pratiques individuelles de magistrats
 
-## 4. Anonymisation : limites et responsabilité
+## 4. Périmètre de l'occultation et responsabilité
 
-L'anonymisation officielle effectuée par la Cour de cassation porte sur les noms et prénoms des **personnes physiques** parties ou tiers. Elle est imparfaite : certaines décisions contiennent encore, par erreur résiduelle :
+L'article L. 111-13, alinéa 1 du Code de l'organisation judiciaire impose une occultation systématique des **nom et prénoms des personnes physiques** parties à l'instance et tiers mentionnés dans la décision, préalablement à sa mise à disposition publique.
 
-- des noms de magistrats ou de membres du greffe
-- des noms de témoins, d'experts, d'auxiliaires de justice
-- des éléments contextuels permettant l'identification indirecte d'une personne
+En revanche, l'alinéa 2 du même article précise que l'occultation des éléments d'identification des **magistrats, membres du greffe, avocats, experts judiciaires, témoins, auxiliaires de justice** n'est **pas systématique** : elle reste **facultative** et n'intervient que sur demande motivée présentée à la Cour de cassation ou au Conseil d'État, lorsque la divulgation est de nature à porter atteinte à la sécurité ou au respect de la vie privée de l'intéressé.
 
-**En important ces décisions dans votre workspace Notion, vous devenez responsable du traitement** des données personnelles qu'elles contiennent au sens du Règlement général sur la protection des données (RGPD, règlement UE 2016/679).
+**Concrètement**, le corpus que vous importez contient donc, dans la plupart des décisions :
+- les nom et prénoms des magistrats ayant siégé
+- les nom et prénoms des membres du greffe
+- les nom et prénoms des avocats des parties
+- parfois les nom et prénoms d'experts, témoins ou auxiliaires de justice
+
+Ces mentions ne résultent pas d'une erreur d'anonymisation : elles correspondent au régime légal d'open data tel qu'il a été pensé par le législateur, qui a privilégié la transparence de l'institution judiciaire sur les professionnels du droit tout en protégeant les justiciables.
+
+**En important ces décisions dans votre workspace Notion, vous devenez responsable du traitement** des données nominatives qu'elles contiennent au sens du Règlement général sur la protection des données (RGPD, règlement UE 2016/679).
 
 À ce titre, vous devez :
-- ne pas tenter de réidentifier les personnes mentionnées
-- ne pas croiser ces données avec d'autres fichiers personnels
-- répondre aux demandes d'effacement ou de rectification que pourrait formuler une personne identifiée à votre insu (articles 16, 17 et 21 du RGPD)
+- respecter l'interdiction de profilage des magistrats et membres du greffe énoncée au point 3 ci-dessus (art. L. 111-13, al. 3 COJ), sanctionnée pénalement
+- ne pas tenter de réidentifier les parties ou tiers anonymisés
+- ne pas croiser les données nominatives avec d'autres fichiers personnels susceptibles de constituer un profilage
+- répondre aux demandes d'effacement ou de rectification que pourrait formuler une personne identifiée (articles 16, 17 et 21 du RGPD)
 - ne pas conserver ces données au-delà du strict nécessaire à votre usage propre
 
 ## 5. Limitation de responsabilité du cabinet Kohen Avocats
