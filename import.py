@@ -129,17 +129,20 @@ class TokenBucket:
         self.lock = threading.Lock()
 
     def acquire(self):
+        wait = 0.0
         with self.lock:
             now = time.time()
             elapsed = now - self.last
             self.tokens = min(self.rate, self.tokens + elapsed * self.rate)
             self.last = now
-            if self.tokens < 1:
-                wait = (1 - self.tokens) / self.rate
-                time.sleep(wait)
-                self.tokens = 0
-            else:
+            if self.tokens >= 1:
                 self.tokens -= 1
+            else:
+                wait = (1 - self.tokens) / self.rate
+                self.tokens = 0
+        # Sleep HORS du lock pour ne pas serialiser les workers concurrents
+        if wait > 0:
+            time.sleep(wait)
 
 
 BUCKET = TokenBucket(TARGET_RPS)
