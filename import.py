@@ -7,6 +7,7 @@ Lecture des JSON Judilibre (champs decision_date, zones, visa, titlesAndSummarie
 construction d'une presentation Notion structuree (callout, headings, divider, bookmark).
 Parallelisme 10 workers + token bucket global pour respecter le rate limit Notion.
 """
+from __future__ import annotations
 
 import base64
 import html
