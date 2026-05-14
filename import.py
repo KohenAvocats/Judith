@@ -25,6 +25,16 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 
+# requests pour le keep-alive HTTP (gain x10-20 par rapport a urllib qui ouvre
+# une nouvelle connexion TLS a chaque requete)
+try:
+    import requests
+    from requests.adapters import HTTPAdapter
+    from urllib3.util.retry import Retry
+    HAS_REQUESTS = True
+except ImportError:
+    HAS_REQUESTS = False
+
 # Mappings location → libelle (extraits de la taxonomy Judilibre officielle)
 try:
     from taxonomies import LOCATION_CA, LOCATION_TJ, LOCATION_TCOM
@@ -236,14 +246,35 @@ class NotionClient:
             "Notion-Version": NOTION_VERSION,
             "Content-Type": "application/json",
         }
+        # Session HTTP avec keep-alive et pool de connexions
+        if HAS_REQUESTS:
+            self.session = requests.Session()
+            self.session.headers.update(self.headers)
+            adapter = HTTPAdapter(pool_connections=WORKERS, pool_maxsize=WORKERS * 2, max_retries=0)
+            self.session.mount("https://", adapter)
+        else:
+            self.session = None
 
     def request(self, method: str, path: str, body: dict | None = None, retries: int = 6) -> dict:
         url = NOTION_API + path if path.startswith("/") else path
         for attempt in range(retries):
             BUCKET.acquire()
-            data = json.dumps(body).encode() if body is not None else None
-            req = urllib.request.Request(url, data=data, headers=self.headers, method=method)
             try:
+                if self.session is not None:
+                    resp = self.session.request(method, url, json=body, timeout=60)
+                    if resp.status_code == 429:
+                        wait = float(resp.headers.get("Retry-After", 5))
+                        time.sleep(wait)
+                        continue
+                    if resp.status_code in (500, 502, 503, 504) and attempt < retries - 1:
+                        time.sleep(min(2 ** attempt, 30))
+                        continue
+                    if resp.status_code >= 400:
+                        raise RuntimeError(f"Notion {method} {path} -> {resp.status_code} {resp.text[:200]}")
+                    return resp.json()
+                # Fallback urllib
+                data = json.dumps(body).encode() if body is not None else None
+                req = urllib.request.Request(url, data=data, headers=self.headers, method=method)
                 with urllib.request.urlopen(req, timeout=60) as resp:
                     return json.loads(resp.read().decode())
             except urllib.error.HTTPError as e:
@@ -256,9 +287,9 @@ class NotionClient:
                     time.sleep(min(2 ** attempt, 30))
                     continue
                 raise RuntimeError(f"Notion {method} {path} -> {e.code} {err_body[:200]}")
-            except urllib.error.URLError:
+            except (urllib.error.URLError,) + ((requests.exceptions.RequestException,) if HAS_REQUESTS else ()):
                 if attempt < retries - 1:
-                    time.sleep(2 ** attempt)
+                    time.sleep(min(2 ** attempt, 30))
                     continue
                 raise
         raise RuntimeError("Notion API unreachable")
