@@ -4,9 +4,9 @@ Présentation du projet : **41 955 décisions de justice rendues en avril 2026**
 
 ## Démonstration
 
-https://github.com/KohenAvocats/Judith/releases/download/v1.0.0/demo.mp4
+![Aperçu de Judith](demo-teaser.gif)
 
-> Si la vidéo ne s'affiche pas dans le lecteur intégré, cliquez sur le lien ci-dessus pour la télécharger ou la visionner directement.
+[Voir la vidéo complète avec son (3 min, 20 Mo)](https://github.com/KohenAvocats/Judith/releases/download/v1.0.0/demo.mp4)
 
 **Ce pack est volontairement limité au mois d'avril 2026** : il sert de démonstration du projet. L'objectif est de montrer aux confrères avocats et aux juristes ce qu'on peut faire avec un corpus de jurisprudence française importé dans un workspace Notion personnel.
 
