@@ -1,0 +1,57 @@
+==============================================================
+  IMPORT DES JURISPRUDENCES D'AVRIL 2026 DANS VOTRE NOTION
+  Cabinet Kohen Avocats
+==============================================================
+
+CONTENU DU ZIP
+- decisions/      41 955 decisions de justice rendues en avril 2026
+                  (Cour de cassation, Cours d'appel, Tribunaux judiciaires,
+                  Tribunaux de commerce) au format Markdown.
+- import.py       Script Python qui se charge de tout.
+- Importer-dans-Notion.command   Lanceur Mac (double-clic).
+- Importer-dans-Notion.bat       Lanceur Windows (double-clic).
+
+UTILISATION (Mac)
+1. Decompressez le ZIP n'importe ou (Bureau, Telechargements, etc.).
+2. Double-cliquez sur "Importer-dans-Notion.command".
+   - Si Mac refuse : clic droit -> Ouvrir -> Ouvrir (1ere fois seulement).
+3. Une fenetre Terminal s'ouvre, puis votre navigateur ouvre Notion.
+4. Connectez-vous a Notion, cliquez "Selectionner les pages",
+   choisissez une page parente, cliquez "Allow".
+5. De retour dans le Terminal, choisissez le numero de la page parente.
+6. Laissez tourner ~3 a 4 heures. Vous pouvez fermer et relancer
+   plus tard : l'import reprendra ou il en etait.
+
+UTILISATION (Windows)
+1. Decompressez le ZIP.
+2. Double-cliquez sur "Importer-dans-Notion.bat".
+3. Suivez les memes etapes que ci-dessus.
+
+PRE-REQUIS
+- Python 3 installe (https://www.python.org/downloads/).
+  Sur Mac, generalement deja present.
+  Sur Windows, cochez "Add Python to PATH" pendant l'installation.
+
+DONNEES & RESPONSABILITE
+Donnees issues de Judilibre (Cour de cassation, api.piste.gouv.fr)
+sous Licence Ouverte Etalab 2.0.
+
+Vous etes responsable du traitement RGPD de ces donnees des leur
+import dans votre workspace Notion. Les CGU PISTE interdisent :
+- toute tentative de reidentification des personnes mentionnees
+- tout recoupement avec d'autres bases personnelles
+- toute revente sans valeur ajoutee substantielle
+- tout profilage de magistrats ou d'avocats nommes
+
+Cet outil ne fournit aucun conseil juridique et ne remplace pas
+une verification sur les sources officielles (courdecassation.fr,
+judilibre.io). Verifiez systematiquement le texte officiel avant
+tout usage professionnel.
+
+EN CAS DE PROBLEME
+- Le script s'arrete a 60% : relancez-le, il reprendra automatiquement.
+- "Aucune page partagee" : dans Notion, ouvrez une page, cliquez "..."
+  en haut a droite -> "Connections" -> ajoutez "Import Jurisprudence FR".
+- Autre : ecrivez a contact@kohenavocats.fr.
+
+==============================================================

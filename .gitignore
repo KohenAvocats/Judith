@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.work/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tokens et caches utilisateur
+.kohen-jurisprudence/
+token.json
+
+# Symlinks vers les données sources (utilisés en dev local, pas pour distribution)
+decisions
+decisions_json
+decisions_md
+
+# Données volumineuses : distribuées via GitHub Releases
+*.zip
+
+# Vidéo source non compressée (on garde demo.mp4 compressé)
+Vidéo de présentation.mov
+*.mov

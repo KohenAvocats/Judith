@@ -1,0 +1,157 @@
+# Jurisprudence française dans Notion — pack d'avril 2026
+
+Une base Notion prête à l'emploi contenant **41 955 décisions de justice rendues en avril 2026** (Cour de cassation, cours d'appel, tribunaux judiciaires, tribunaux de commerce). Texte intégral, métadonnées structurées, recherche par l'IA Notion native.
+
+Mis à disposition par le cabinet **[Kohen Avocats](https://www.kohenavocats.fr)**.
+
+---
+
+## À qui ça s'adresse
+
+À tout avocat, juriste, magistrat, étudiant ou universitaire qui veut un corpus de jurisprudence française récent, structuré et exploitable par une IA conversationnelle. Une fois importé dans votre espace Notion, vous pouvez interroger les 41 955 décisions en langage naturel via l'IA intégrée à Notion : *« Trouve-moi les décisions sur la garde alternée d'un animal de compagnie »*, *« Décisions en matière de cyberharcèlement scolaire en avril 2026 »*, etc.
+
+---
+
+## Si vous êtes un débutant total en informatique
+
+Suivez les étapes dans l'ordre. Ne sautez rien. L'installation prend moins de 10 minutes, puis l'import dans Notion tourne tout seul pendant 1 à 2 heures.
+
+### Étape 1 — Créer un compte Notion (si vous n'en avez pas)
+
+1. Allez sur https://www.notion.so
+2. Cliquez sur **"S'inscrire gratuitement"**
+3. Renseignez votre adresse e-mail et un mot de passe, puis suivez le parcours d'inscription
+4. Une fois connecté, vous arrivez sur votre espace de travail. Notez visuellement à quoi ressemble la barre latérale gauche, c'est là qu'on va créer une page tout à l'heure
+
+### Étape 2 — Installer Python (si pas déjà installé)
+
+Le script qui importe les décisions a besoin de Python 3. Beaucoup de Mac l'ont déjà, beaucoup de Windows non.
+
+**Sur Mac**
+
+Ouvrez l'application **Terminal** (Spotlight → tapez "Terminal" → entrée), puis tapez :
+```
+python3 --version
+```
+Si vous obtenez un numéro de version (3.10, 3.11, 3.12 ou plus récent), c'est bon. Sinon, allez sur https://www.python.org/downloads/ et téléchargez l'installateur pour Mac, double-cliquez, suivez les étapes.
+
+**Sur Windows**
+
+Allez sur https://www.python.org/downloads/ et téléchargez l'installateur Windows. Lancez-le. **Cochez impérativement la case "Add Python to PATH"** au début de l'installation, sinon le script ne pourra pas se lancer. Cliquez "Install Now".
+
+### Étape 3 — Télécharger le pack jurisprudence
+
+Allez sur la page Releases du projet : https://github.com/KohenAvocats/jurisprudence-vers-notion/releases
+
+Téléchargez le fichier `Jurisprudence-Avril-2026.zip` (environ 200 Mo).
+
+Décompressez-le là où vous voulez : sur votre Bureau, dans Téléchargements, peu importe. Vous obtenez un dossier `Jurisprudence-Avril-2026/` qui contient plusieurs fichiers et un sous-dossier `decisions_json/`.
+
+### Étape 4 — Lancer l'import
+
+**Sur Mac**
+
+Double-cliquez sur **`Importer-dans-Notion.command`** dans le dossier décompressé.
+
+La première fois, macOS peut refuser de l'ouvrir pour des raisons de sécurité ("ce fichier ne peut pas être ouvert car son auteur n'a pas pu être vérifié"). Si c'est le cas : **clic droit** sur le fichier → **Ouvrir** → confirmez **Ouvrir** dans la boîte de dialogue. C'est nécessaire seulement la première fois.
+
+Une fenêtre noire (Terminal) s'ouvre. Laissez-la ouverte, c'est là que tout se passe.
+
+**Sur Windows**
+
+Double-cliquez sur **`Importer-dans-Notion.bat`** dans le dossier décompressé. Une fenêtre noire (Invite de commandes) s'ouvre, laissez-la ouverte.
+
+### Étape 5 — Autoriser dans Notion
+
+Le script va ouvrir automatiquement votre navigateur sur une page Notion qui demande votre autorisation.
+
+1. Si vous n'êtes pas connecté à Notion, **connectez-vous** avec votre compte
+2. Sur la page d'autorisation, Notion vous demande de **sélectionner les pages** auxquelles l'application aura accès. Cliquez sur **"Sélectionner les pages"** ou **"Select pages"**
+3. **Cochez UNE SEULE page** de votre choix. Si vous n'en avez aucune, créez-en une depuis Notion (barre de gauche → "+" → tapez un titre comme "Jurisprudence Avril 2026" → revenez au flow d'autorisation)
+4. Cliquez sur **"Autoriser"** ou **"Allow"**
+
+Votre navigateur affiche un message "Authentification réussie" et vous demande de revenir au Terminal.
+
+### Étape 6 — Laisser tourner
+
+Le script crée une nouvelle base de données dans Notion appelée "Jurisprudence Avril 2026", puis commence à importer les 41 955 décisions. Vous voyez la progression dans le Terminal :
+
+```
+[250/41955] 8.2/s  ETA 85 min
+[500/41955] 8.4/s  ETA 82 min
+```
+
+Comptez environ 1h30 à 2h. Vous pouvez fermer le Terminal et le relancer plus tard, le script reprend automatiquement là où il s'était arrêté.
+
+### Étape 7 — Utiliser le corpus
+
+Une fois l'import terminé, ouvrez Notion. Vous trouverez sur la page que vous aviez créée une nouvelle base de données "Jurisprudence Avril 2026" avec 41 955 entrées. Vous pouvez :
+
+- **Filtrer** par Juridiction (Cour de cassation, cours d'appel, etc.), Date, Chambre, Numéro
+- **Cliquer** sur une décision pour voir le texte intégral
+- **Interroger l'IA Notion** : ouvrez l'IA Notion (icône AI en haut à droite ou raccourci `cmd+J` / `ctrl+J`), choisissez "Discuter avec cette page" sur la base de données, et posez des questions en langage naturel
+
+---
+
+## En cas de problème
+
+### Le script s'arrête en cours
+
+Relancez-le simplement. Il reprend automatiquement où il s'était arrêté grâce à un fichier de progression caché dans votre dossier personnel (`~/.kohen-jurisprudence/`).
+
+### "Python 3 n'est pas installé"
+
+Retournez à l'Étape 2 et installez Python depuis https://www.python.org. Sur Windows, n'oubliez pas de cocher **"Add Python to PATH"**.
+
+### "Aucune page partagée avec l'application"
+
+C'est que vous n'avez pas coché de page lors de l'autorisation Notion. Le script vous indique la marche à suivre. En résumé : créez une page dans Notion, cliquez sur les "..." en haut à droite de cette page, puis "Connexions" / "Connections", cherchez "Créateur de RAG" et confirmez. Revenez au Terminal et appuyez sur Entrée.
+
+### "ERR_NETWORK" ou autres erreurs réseau
+
+Vérifiez votre connexion internet. Si OK, attendez 5 minutes et relancez.
+
+### Mac : "ne peut pas être ouvert car son auteur n'a pas pu être vérifié"
+
+Clic droit sur `Importer-dans-Notion.command` → **Ouvrir** → confirmez **Ouvrir**. C'est nécessaire seulement la première fois.
+
+### Besoin d'aide humaine
+
+Ouvrez une issue GitHub : https://github.com/KohenAvocats/jurisprudence-vers-notion/issues
+
+Ou copiez le fichier `CLAUDE.md` du projet dans une conversation Claude/ChatGPT, expliquez votre problème, l'IA aura tout le contexte pour vous guider.
+
+---
+
+## Données et responsabilité
+
+Les décisions sont issues de **Judilibre** (api.piste.gouv.fr), service officiel de la Cour de cassation, sous **Licence Ouverte Etalab 2.0**.
+
+Une fois importées dans votre espace Notion, **vous devenez responsable du traitement RGPD** de ces données. Les CGU de l'API PISTE interdisent :
+
+- toute tentative de réidentification des personnes mentionnées
+- tout recoupement avec d'autres bases personnelles
+- toute revente sans valeur ajoutée substantielle
+- tout profilage de magistrats ou d'avocats nommés
+
+Cet outil ne fournit **aucun conseil juridique** et ne remplace pas une vérification sur les sources officielles ([courdecassation.fr](https://www.courdecassation.fr), [judilibre.io](https://www.judilibre.io)). Vérifiez systématiquement le texte officiel avant tout usage professionnel.
+
+---
+
+## Sous le capot
+
+- **Source** : API Judilibre / piste.gouv.fr, endpoint `/export`
+- **Volume** : 41 955 décisions distinctes, environ 130 Mo de texte brut
+- **Période** : du 1ᵉʳ au 30 avril 2026 (date d'indexation Judilibre, couvre l'essentiel des décisions rendues sur la période)
+- **Juridictions** : Cour de cassation (1 111), cours d'appel (8 627), tribunaux judiciaires (25 812), tribunaux de commerce (6 405)
+- **Authentification Notion** : OAuth 2.0 via redirection HTTPS vers GitHub Pages, aucune donnée ne transite par le cabinet
+- **Parallélisme** : 10 workers, token bucket à 8 req/s pour respecter le rate limit Notion
+- **Reprise** : fichier `progress.jsonl` local, idempotent
+
+Le code source est ouvert et auditable : tout est dans `import.py`.
+
+---
+
+## Licence
+
+Code sous licence MIT. Données sous Licence Ouverte Etalab 2.0 (origine Cour de cassation / DILA).
