@@ -107,11 +107,11 @@ Vérifiez votre connexion internet. Si OK, attendez 5 minutes et relancez.
 
 Clic droit sur `Importer-dans-Notion.command` → **Ouvrir** → confirmez **Ouvrir**. C'est nécessaire seulement la première fois.
 
-### Besoin d'aide humaine
+### Besoin d'aide
 
-Ouvrez une issue GitHub : https://github.com/KohenAvocats/juris-notion/issues
+Copiez le fichier `CLAUDE.md` du projet dans une conversation Claude (https://claude.ai) ou ChatGPT (https://chatgpt.com), expliquez votre problème, l'IA aura tout le contexte pour vous guider.
 
-Ou copiez le fichier `CLAUDE.md` du projet dans une conversation Claude/ChatGPT, expliquez votre problème, l'IA aura tout le contexte pour vous guider.
+Aucune assistance humaine n'est assurée par le cabinet sur ce projet. Le code et la documentation sont fournis "as is".
 
 ---
 

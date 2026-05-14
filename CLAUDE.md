@@ -93,8 +93,6 @@ Quand un utilisateur vous demande de l'aide :
 
 ---
 
-## Contact
+## Assistance
 
-Pour les questions juridiques sur l'usage du corpus ou les conditions de redistribution : contact@kohenavocats.fr
-
-Pour les questions techniques avancées : ouvrir une issue sur https://github.com/KohenAvocats/juris-notion/issues
+Aucune assistance humaine n'est assurée par le cabinet Kohen Avocats sur ce projet. Le code et la documentation sont fournis "as is". L'utilisateur s'appuie sur ce fichier CLAUDE.md et sur Claude/ChatGPT pour résoudre ses difficultés.

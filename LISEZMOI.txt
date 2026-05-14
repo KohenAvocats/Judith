@@ -52,6 +52,8 @@ EN CAS DE PROBLEME
 - Le script s'arrete a 60% : relancez-le, il reprendra automatiquement.
 - "Aucune page partagee" : dans Notion, ouvrez une page, cliquez "..."
   en haut a droite -> "Connections" -> ajoutez "Import Jurisprudence FR".
-- Autre : ecrivez a contact@kohenavocats.fr.
+- Autre : aucune assistance humaine n'est assuree par le cabinet sur ce projet.
+  Utilisez le fichier CLAUDE.md avec Claude (https://claude.ai) ou ChatGPT
+  (https://chatgpt.com) pour vous faire guider.
 
 ==============================================================
