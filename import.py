@@ -51,8 +51,8 @@ DB_FILE = CONFIG_DIR / "database.json"
 MAX_BLOCK_CHARS = 1900
 MAX_BLOCKS_PER_REQUEST = 90
 
-WORKERS = 10
-TARGET_RPS = 8.0
+WORKERS = 20
+TARGET_RPS = 15.0  # Notion documente 3 req/s mais tolere des bursts ; on monte agressivement et on respecte Retry-After sur 429
 
 # ===================== MAPPINGS =====================
 
@@ -393,18 +393,31 @@ def bookmark(url: str, caption: str = "") -> dict:
     return block
 
 
+def _extract_zone_text(zone_obj, text: str) -> str:
+    """Extrait le texte d'une zone Judilibre (offsets start/end dans text)."""
+    if isinstance(zone_obj, list):
+        parts = []
+        for item in zone_obj:
+            if isinstance(item, dict) and "start" in item and "end" in item:
+                parts.append(text[item["start"]:item["end"]])
+            elif isinstance(item, str):
+                parts.append(item)
+        return "\n\n".join(p.strip() for p in parts if p.strip())
+    if isinstance(zone_obj, dict) and "start" in zone_obj and "end" in zone_obj:
+        return text[zone_obj["start"]:zone_obj["end"]]
+    if isinstance(zone_obj, str):
+        return zone_obj
+    return ""
+
+
 def text_chunks_to_paragraphs(text: str) -> list[dict]:
-    """Convertit un texte libre en blocs paragraph (et headings sur lignes ALL CAPS)."""
+    """Convertit un texte libre en blocs paragraph Notion (<= 1900 chars chacun)."""
     blocks = []
-    paragraphs = re.split(r"\n\s*\n", text)
+    # Normalise les sauts de ligne multiples
+    paragraphs = re.split(r"\n\s*\n+", text)
     for p in paragraphs:
         p = p.strip()
         if not p:
-            continue
-        # Detection ligne titre (toute en majuscules, courte)
-        is_title = (len(p) <= 80 and p.isupper() and any(c.isalpha() for c in p))
-        if is_title:
-            blocks.append(heading(3, p.title()))  # capitalisation soft
             continue
         for i in range(0, len(p), MAX_BLOCK_CHARS):
             chunk = p[i:i + MAX_BLOCK_CHARS]
@@ -497,17 +510,18 @@ def build_body(d: dict) -> list[dict]:
 
     zones = d.get("zones") or {}
     text = d.get("text") or ""
-    if zones and any(zones.get(k) for k in ("introduction", "motivations", "dispositif")):
-        # Utiliser le decoupage semantique Judilibre
+    if zones and any(zones.get(k) for k in ("introduction", "motivations", "dispositif")) and text:
+        # Le decoupage semantique Judilibre est une liste d'offsets {start, end} dans `text`
         zone_labels = {"introduction": "Introduction et procédure",
                        "motivations": "Motifs de la décision",
                        "dispositif": "Dispositif"}
         for zone_key in ("introduction", "motivations", "dispositif"):
-            zone_text = zones.get(zone_key)
-            if not zone_text:
+            zone_obj = zones.get(zone_key)
+            if not zone_obj:
                 continue
-            if isinstance(zone_text, list):
-                zone_text = "\n\n".join(str(z) for z in zone_text)
+            zone_text = _extract_zone_text(zone_obj, text)
+            if not zone_text.strip():
+                continue
             blocks.append(heading(3, zone_labels[zone_key]))
             blocks.extend(text_chunks_to_paragraphs(zone_text))
     else:
