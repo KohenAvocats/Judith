@@ -9,7 +9,7 @@ J'ai mis le tout dans un dépôt GitHub open source : un script vous authentifie
 L'idée : permettre à chaque confrère de constituer chez lui un premier corpus jurisprudentiel exploitable par une IA, sans abonnement à une plateforme, sans clé API à gérer, sans configuration technique. Le code est ouvert, les données proviennent de l'API officielle Judilibre sous Licence Ouverte Etalab 2.0.
 
 Pour l'installation détaillée et le téléchargement :
-https://github.com/KohenAvocats/juris-notion
+https://github.com/KohenAvocats/Judith
 
 Disclaimer technique. Une fois importées dans votre workspace, vous devenez responsable du traitement RGPD des données. Cet outil ne fournit aucun conseil juridique et ne dispense pas d'une vérification sur les sources officielles avant tout usage professionnel.
 
@@ -26,7 +26,7 @@ Comment construire chez soi un corpus jurisprudentiel français interrogeable pa
 
 Le projet est sur GitHub : il prend les 41 955 décisions de justice rendues en avril 2026 par les juridictions françaises (Cour de cassation, cours d'appel, tribunaux judiciaires, tribunaux de commerce), et les importe automatiquement dans votre Notion. Une fois la base créée, l'IA native de Notion peut interroger l'ensemble en langage naturel.
 
-Pour une démo : voir la vidéo ci-jointe. Pour télécharger : github.com/KohenAvocats/juris-notion
+Pour une démo : voir la vidéo ci-jointe. Pour télécharger : github.com/KohenAvocats/Judith
 
 C'est le premier pack d'une série mensuelle. Code ouvert, données Etalab, zéro frais. À ranger dans la trousse à outils des cabinets qui veulent expérimenter sans engager d'abonnement à plusieurs centaines d'euros par mois.
 
@@ -47,7 +47,7 @@ Données issues de Judilibre (Cour de cassation) sous Licence Ouverte Etalab. Ne
 
 Hassan KOHEN — Kohen Avocats
 
-(en commentaire : https://github.com/KohenAvocats/juris-notion)
+(en commentaire : https://github.com/KohenAvocats/Judith)
 
 ---
 

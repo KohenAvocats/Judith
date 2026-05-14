@@ -35,7 +35,7 @@ Le script a besoin de Python 3. La plupart des Mac l'ont déjà. Si ce n'est pas
 
 ### Étape 3 — Télécharger le pack jurisprudence
 
-Allez sur la page Releases du projet : https://github.com/KohenAvocats/juris-notion/releases
+Allez sur la page Releases du projet : https://github.com/KohenAvocats/Judith/releases
 
 Téléchargez le fichier `Jurisprudence-Avril-2026.zip` (environ 200 Mo).
 

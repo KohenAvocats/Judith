@@ -1,6 +1,6 @@
 # Conditions d'utilisation
 
-Ce document précise le cadre légal et les obligations à respecter lors de l'utilisation du pack juris-notion et des données qu'il importe dans votre espace Notion. **La lecture intégrale est indispensable avant tout usage professionnel.**
+Ce document précise le cadre légal et les obligations à respecter lors de l'utilisation du pack Judith et des données qu'il importe dans votre espace Notion. **La lecture intégrale est indispensable avant tout usage professionnel.**
 
 ## 1. Source des données
 
@@ -71,8 +71,8 @@ Si vous êtes avocat et que vous utilisez ce corpus dans le cadre de votre activ
 
 ## 7. Acceptation
 
-L'installation et l'utilisation du pack juris-notion **valent acceptation pleine et entière** des présentes conditions. En cas de désaccord, l'utilisateur doit s'abstenir de tout téléchargement, installation ou usage.
+L'installation et l'utilisation du pack Judith **valent acceptation pleine et entière** des présentes conditions. En cas de désaccord, l'utilisateur doit s'abstenir de tout téléchargement, installation ou usage.
 
 ---
 
-Texte mis à jour le 14 mai 2026. Version applicable à juris-notion v1.0.0.
+Texte mis à jour le 14 mai 2026. Version applicable à Judith v1.0.0.
