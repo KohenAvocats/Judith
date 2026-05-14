@@ -1,10 +1,12 @@
-# juris-notion
+# Recherche jurisprudentielle dans Notion
 
 Présentation du projet : **41 955 décisions de justice rendues en avril 2026** (Cour de cassation, cours d'appel, tribunaux judiciaires, tribunaux de commerce), importables dans votre Notion en deux clics. Texte intégral, métadonnées structurées, recherche par l'IA Notion native.
 
 **Ce pack est volontairement limité au mois d'avril 2026** : il sert de démonstration du projet. L'objectif est de montrer aux confrères avocats et aux juristes ce qu'on peut faire avec un corpus de jurisprudence française importé dans un workspace Notion personnel.
 
 Mis à disposition par le cabinet **[Kohen Avocats](https://www.kohenavocats.fr)**.
+
+> **Avant tout téléchargement, lisez impérativement le fichier [CONDITIONS.md](CONDITIONS.md).** L'installation vaut acceptation des conditions d'usage (Licence Ouverte Etalab 2.0, restrictions de l'article L. 111-13 du Code de l'organisation judiciaire sur le profilage des magistrats, obligations RGPD, limitation de responsabilité du cabinet).
 
 ---
 
@@ -117,16 +119,20 @@ Aucune assistance humaine n'est assurée par le cabinet sur ce projet. Le code e
 
 ## Données et responsabilité
 
-Les décisions sont issues de **Judilibre** (api.piste.gouv.fr), service officiel de la Cour de cassation, sous **Licence Ouverte Etalab 2.0**.
+Les décisions sont issues de **Judilibre**, base officielle de la Cour de cassation, accessible via l'API publique [api.piste.gouv.fr](https://piste.gouv.fr) sous **Licence Ouverte Etalab 2.0**.
 
-Une fois importées dans votre espace Notion, **vous devenez responsable du traitement RGPD** de ces données. Les CGU de l'API PISTE interdisent :
+Cadre légal : article L. 111-13 du Code de l'organisation judiciaire, article 33 de la loi n° 2019-222 du 23 mars 2019, décrets n° 2020-797 et n° 2021-1276.
 
-- toute tentative de réidentification des personnes mentionnées
-- tout recoupement avec d'autres bases personnelles
+Une fois importées dans votre espace Notion, **vous devenez responsable du traitement RGPD** de ces données. Sont notamment interdits :
+
+- toute tentative de réidentification des personnes physiques mentionnées
+- tout profilage, classement, évaluation ou comparaison des magistrats et membres du greffe (sanctionné par l'art. 226-18 du Code pénal : 5 ans d'emprisonnement et 300 000 € d'amende)
+- tout recoupement avec d'autres bases nominatives
 - toute revente sans valeur ajoutée substantielle
-- tout profilage de magistrats ou d'avocats nommés
 
-Cet outil ne fournit **aucun conseil juridique** et ne remplace pas une vérification sur les sources officielles ([courdecassation.fr](https://www.courdecassation.fr), [judilibre.io](https://www.judilibre.io)). Vérifiez systématiquement le texte officiel avant tout usage professionnel.
+Cet outil ne fournit **aucun conseil juridique** et ne remplace pas une vérification sur la source officielle : [www.courdecassation.fr](https://www.courdecassation.fr). Vérifiez systématiquement le texte officiel avant tout usage professionnel.
+
+**L'intégralité des conditions est dans [CONDITIONS.md](CONDITIONS.md). Son acceptation est requise pour utiliser le projet.**
 
 ---
 

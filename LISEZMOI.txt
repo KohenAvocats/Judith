@@ -44,9 +44,11 @@ import dans votre workspace Notion. Les CGU PISTE interdisent :
 - tout profilage de magistrats ou d'avocats nommes
 
 Cet outil ne fournit aucun conseil juridique et ne remplace pas
-une verification sur les sources officielles (courdecassation.fr,
-judilibre.io). Verifiez systematiquement le texte officiel avant
-tout usage professionnel.
+une verification sur la source officielle (www.courdecassation.fr).
+Verifiez systematiquement le texte officiel avant tout usage
+professionnel.
+
+Cadre legal complet : voir CONDITIONS.md (acceptation requise).
 
 EN CAS DE PROBLEME
 - Le script s'arrete a 60% : relancez-le, il reprendra automatiquement.

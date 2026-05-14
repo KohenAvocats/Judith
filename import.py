@@ -423,9 +423,8 @@ def extract_visa_links(visa_html: str) -> list[tuple[str, str]]:
 
 
 def source_url(decision_id: str, jurisdiction: str) -> str:
-    if jurisdiction == "cc":
-        return f"https://www.courdecassation.fr/decision/{decision_id}"
-    return f"https://www.judilibre.io/decisions/{decision_id}"
+    # L'ensemble des decisions Judilibre est exposé sur courdecassation.fr
+    return f"https://www.courdecassation.fr/decision/{decision_id}"
 
 
 def build_body(d: dict) -> list[dict]:
