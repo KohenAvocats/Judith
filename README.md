@@ -10,7 +10,7 @@ https://github.com/KohenAvocats/Judith/releases/download/v1.0.0/demo.mp4
 
 **Ce pack est volontairement limité au mois d'avril 2026** : il sert de démonstration du projet. L'objectif est de montrer aux confrères avocats et aux juristes ce qu'on peut faire avec un corpus de jurisprudence française importé dans un workspace Notion personnel.
 
-Mis à disposition par le cabinet **[Kohen Avocats](https://www.kohenavocats.fr)**.
+Mis à disposition par le cabinet **[Kohen Avocats](https://www.kohenavocats.com)**.
 
 > **Avant tout téléchargement, lisez impérativement le fichier [CONDITIONS.md](CONDITIONS.md).** L'installation vaut acceptation des conditions d'usage (Licence Ouverte Etalab 2.0, restrictions de l'article L. 111-13 du Code de l'organisation judiciaire sur le profilage des magistrats, obligations RGPD, limitation de responsabilité du cabinet).
 

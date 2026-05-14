@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Import des jurisprudences Judilibre dans Notion via OAuth.
-Cabinet Kohen Avocats - https://www.kohenavocats.fr
+Cabinet Kohen Avocats - https://www.kohenavocats.com
 
 Lecture des JSON Judilibre (champs decision_date, zones, visa, titlesAndSummaries),
 construction d'une presentation Notion structuree (callout, headings, divider, bookmark).
