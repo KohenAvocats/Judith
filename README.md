@@ -1,6 +1,8 @@
-# Jurisprudence française dans Notion — pack d'avril 2026
+# juris-notion
 
-Une base Notion prête à l'emploi contenant **41 955 décisions de justice rendues en avril 2026** (Cour de cassation, cours d'appel, tribunaux judiciaires, tribunaux de commerce). Texte intégral, métadonnées structurées, recherche par l'IA Notion native.
+Présentation du projet : **41 955 décisions de justice rendues en avril 2026** (Cour de cassation, cours d'appel, tribunaux judiciaires, tribunaux de commerce), importables dans votre Notion en deux clics. Texte intégral, métadonnées structurées, recherche par l'IA Notion native.
+
+**Ce pack est volontairement limité au mois d'avril 2026** : il sert de démonstration du projet. L'objectif est de montrer aux confrères avocats et aux juristes ce qu'on peut faire avec un corpus de jurisprudence française importé dans un workspace Notion personnel.
 
 Mis à disposition par le cabinet **[Kohen Avocats](https://www.kohenavocats.fr)**.
 
@@ -23,25 +25,15 @@ Suivez les étapes dans l'ordre. Ne sautez rien. L'installation prend moins de 1
 3. Renseignez votre adresse e-mail et un mot de passe, puis suivez le parcours d'inscription
 4. Une fois connecté, vous arrivez sur votre espace de travail. Notez visuellement à quoi ressemble la barre latérale gauche, c'est là qu'on va créer une page tout à l'heure
 
-### Étape 2 — Installer Python (si pas déjà installé)
+### Étape 2 — Python (installation automatique sur Mac)
 
-Le script qui importe les décisions a besoin de Python 3. Beaucoup de Mac l'ont déjà, beaucoup de Windows non.
+Le script a besoin de Python 3. La plupart des Mac l'ont déjà. Si ce n'est pas votre cas, **rien à faire vous-même** : le lanceur Mac détecte l'absence et déclenche automatiquement l'installation des outils Apple (~5 min, un seul dialog à valider).
 
-**Sur Mac**
-
-Ouvrez l'application **Terminal** (Spotlight → tapez "Terminal" → entrée), puis tapez :
-```
-python3 --version
-```
-Si vous obtenez un numéro de version (3.10, 3.11, 3.12 ou plus récent), c'est bon. Sinon, allez sur https://www.python.org/downloads/ et téléchargez l'installateur pour Mac, double-cliquez, suivez les étapes.
-
-**Sur Windows**
-
-Allez sur https://www.python.org/downloads/ et téléchargez l'installateur Windows. Lancez-le. **Cochez impérativement la case "Add Python to PATH"** au début de l'installation, sinon le script ne pourra pas se lancer. Cliquez "Install Now".
+**Sur Windows uniquement** : Python n'est pas pré-installé. Allez sur https://www.python.org/downloads/, téléchargez l'installateur, lancez-le, et **cochez impérativement la case "Add Python to PATH"** au début de l'installation avant de cliquer "Install Now".
 
 ### Étape 3 — Télécharger le pack jurisprudence
 
-Allez sur la page Releases du projet : https://github.com/KohenAvocats/jurisprudence-vers-notion/releases
+Allez sur la page Releases du projet : https://github.com/KohenAvocats/juris-notion/releases
 
 Téléchargez le fichier `Jurisprudence-Avril-2026.zip` (environ 200 Mo).
 
@@ -117,7 +109,7 @@ Clic droit sur `Importer-dans-Notion.command` → **Ouvrir** → confirmez **Ouv
 
 ### Besoin d'aide humaine
 
-Ouvrez une issue GitHub : https://github.com/KohenAvocats/jurisprudence-vers-notion/issues
+Ouvrez une issue GitHub : https://github.com/KohenAvocats/juris-notion/issues
 
 Ou copiez le fichier `CLAUDE.md` du projet dans une conversation Claude/ChatGPT, expliquez votre problème, l'IA aura tout le contexte pour vous guider.
 

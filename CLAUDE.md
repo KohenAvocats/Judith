@@ -16,7 +16,7 @@ Ce fichier est destiné à être copié-collé dans une conversation **Claude** 
 
 ## Présentation du projet
 
-Le projet `jurisprudence-vers-notion` est un outil gratuit publié par le cabinet **Kohen Avocats** qui permet à n'importe quel utilisateur (avocat, juriste, étudiant) d'importer dans son propre espace Notion un corpus de **41 955 décisions de justice françaises rendues en avril 2026** (Cour de cassation, cours d'appel, tribunaux judiciaires, tribunaux de commerce).
+Le projet `juris-notion` est un outil gratuit publié par le cabinet **Kohen Avocats** qui permet à n'importe quel utilisateur (avocat, juriste, étudiant) d'importer dans son propre espace Notion un corpus de **41 955 décisions de justice françaises rendues en avril 2026** (Cour de cassation, cours d'appel, tribunaux judiciaires, tribunaux de commerce).
 
 L'objectif : permettre à chacun de construire localement une base de jurisprudence interrogeable en langage naturel via l'IA native de Notion.
 
@@ -97,4 +97,4 @@ Quand un utilisateur vous demande de l'aide :
 
 Pour les questions juridiques sur l'usage du corpus ou les conditions de redistribution : contact@kohenavocats.fr
 
-Pour les questions techniques avancées : ouvrir une issue sur https://github.com/KohenAvocats/jurisprudence-vers-notion/issues
+Pour les questions techniques avancées : ouvrir une issue sur https://github.com/KohenAvocats/juris-notion/issues
